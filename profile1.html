@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        .profile-container {
+            max-width: 900px;
+            margin: 50px auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .profile-header {
+            background: #4caf50;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            position: relative;
+        }
+
+        .profile-header img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid white;
+            margin-bottom: 10px;
+        }
+
+        .profile-header h1 {
+            font-size: 1.8rem;
+        }
+
+        .profile-header p {
+            font-size: 1rem;
+        }
+
+        .logout-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #ff4c4c;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        .logout-btn:hover {
+            background: #e64343;
+        }
+
+        .profile-content {
+            padding: 20px;
+        }
+
+        .profile-section {
+            margin-bottom: 30px;
+        }
+
+        .profile-section h2 {
+            font-size: 1.4rem;
+            color: #4caf50;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        .profile-section p, .profile-section ul {
+            margin-top: 10px;
+            line-height: 1.5;
+        }
+
+        .profile-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .profile-section ul li {
+            background: #f9f9f9;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #222;
+            color: white;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <!-- Profile Header -->
+        <div class="profile-header">
+            <img src="joe.png" alt="User Profile Picture">
+            <h1>Jane Doe</h1>
+            <p>Sign Language Enthusiast</p>
+            <button class="logout-btn" onclick="logout()">Logout</button>
+        </div>
+
+        <!-- Profile Content -->
+        <div class="profile-content">
+            <!-- About Section -->
+            <div class="profile-section">
+                <h2>About Me</h2>
+                <p>Name: Jane Doe</p>
+                <p>Email: jane.doe@example.com</p>
+                <p>Phone: +1-234-567-8901</p>
+                <p>Learning sign language to connect with the community and explore new ways to communicate.</p>
+            </div>
+
+            <!-- Activities Section -->
+            <div class="profile-section">
+                <h2>Activities</h2>
+                <ul>
+                    <li>Completed 3 sign language lessons</li>
+                    <li>Practiced detection 5 times this week</li>
+                    <li>Most detected word: "Hello"</li>
+                </ul>
+            </div>
+
+            <!-- Detection History Section -->
+            <div class="profile-section">
+                <h2>Detection History</h2>
+                <ul>
+                    <li>Detected: "Hello" | Accuracy: 92% | Date: 2024-11-18</li>
+                    <li>Detected: "Thank You" | Accuracy: 85% | Date: 2024-11-17</li>
+                    <li>Detected: "Yes" | Accuracy: 88% | Date: 2024-11-15</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Sign Language Detection Platform | <a href="#">Privacy Policy</a> | <a href="#">Contact Us</a>
+    </footer>
+
+    <script>
+        function logout() {
+            // Simulating a logout process
+            alert("You have logged out.");
+            window.location.href = "login.html"; // Redirect to login page
+        }
+    </script>
+</body>
+</html>
